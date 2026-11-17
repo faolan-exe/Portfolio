@@ -1,0 +1,50 @@
+/* Impressum / Datenschutz */
+
+.legal {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.legal .back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.legal h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.legal h2 {
+  font-size: 1.25rem;
+  margin: 2rem 0 0.5rem;
+}
+
+.legal p,
+.legal li {
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.legal ul {
+  padding-left: 1.5rem;
+}
+
+.legal a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* 404 page */
+
+.not-found {
+  text-align: center;
+  padding-top: 25vh;
+}
+
+.not-found h1 {
+  font-size: 6rem;
+  margin-bottom: 0.5rem;
+}

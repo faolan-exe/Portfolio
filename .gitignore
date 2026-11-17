@@ -1,0 +1,4 @@
+.DS_Store
+.env
+# full-size source photos, only the optimized versions are published
+assets/images/originals/

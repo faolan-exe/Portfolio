@@ -3,22 +3,23 @@
   align-items: center;
 }
 
-svg {
+.theme-toggle-graphic {
   z-index: 2;
   pointer-events: none;
   margin-left: -74px;
 }
 
-#day,
-#night {
+.theme-toggle {
   width: 70px;
   height: 35px;
-  background: white;
   z-index: 1;
   cursor: pointer;
   border-radius: 100px;
   background: #9cd6ef;
   border: 3px solid #65c0e7;
+  display: block;
+  padding: 0;
+  box-sizing: content-box;
 }
 
 .dayNight {
@@ -26,14 +27,14 @@ svg {
   position: relative;
 }
 
-#day,
-#night {
-  top: 0;
-  left: 0;
+.hamburger-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-#night {
-  pointer-events: none;
+.hamburger-actions .dayNight {
+  margin-left: 0;
 }
 
 #background {
@@ -52,34 +53,49 @@ a {
   transition: all 1s;
 }
 
-.btn-color-2.dark:hover {
+/* Dark theme: one class on <html>, set before the first paint by theme-init.js */
+
+.theme-dark {
+  color-scheme: light dark;
+}
+
+.theme-dark #background {
+  background: #0d1f2b;
+}
+
+.theme-dark .theme-toggle {
+  background: #224f6d;
+  border-color: #cad4d8;
+}
+
+.theme-dark .btn-color-2:hover {
   background-color: rgb(192, 192, 192);
   color: black;
   border: 0;
 }
-.btn-color-2.dark {
+.theme-dark .btn-color-2 {
   color: #e9e9e9;
   border: solid 1px #e9e9e9 !important;
 }
-.btn-color-1.dark:hover {
+.theme-dark .btn-color-1:hover {
   background-color: white;
   color: black;
 }
 
-p.dark {
+.theme-dark p {
   color: rgb(204, 204, 204);
 }
 
-.details-container.dark {
+.theme-dark .details-container {
   background-color: rgb(53, 53, 53);
 }
 
-h2.dark {
+.theme-dark h2,
+.theme-dark .experience-sub-title {
   color: white;
 }
 
-/* Default styles for images */
-img.icon.dark {
+.theme-dark img.icon {
   filter: invert(1);
 }
 
@@ -87,11 +103,32 @@ img.icon {
   transition: all 1s;
 }
 
-.menu-links.dark {
+.theme-dark .menu-links {
   color: white;
   background-color: rgb(53, 53, 53);
 }
 
-.hamburger-icon.dark span {
-background-color: white;
+.theme-dark .hamburger-icon span {
+  background-color: white;
+}
+
+.theme-dark a {
+  color: white;
+}
+
+.theme-dark .legal-links a {
+  color: rgb(170, 170, 170);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  :root {
+    transition: none !important;
+  }
+}
+
+/* No fade animations while the page is loading */
+.no-transition,
+.no-transition * {
+  transition: none !important;
 }
