@@ -1,31 +1,39 @@
-<!-- Todo: Change Icon size and color -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Tobias Auer</title>
+    <meta
+      name="description"
+      content="Portfolio of Tobias Auer: computer science student building full-stack web applications and custom ESP32 hardware."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Portfolio - Tobias Auer" />
+    <meta
+      property="og:description"
+      content="Full-stack web development and custom ESP32 hardware projects."
+    />
+    <meta property="og:url" content="https://t-auer.com/" />
+    <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/mediaqueries.css" />
+    <link rel="stylesheet" href="./assets/css/darkmode.css" />
+    <noscript><link rel="stylesheet" href="./assets/css/noscript.css" /></noscript>
+    <script src="./assets/js/theme-init.js"></script>
+    <script defer src="./assets/vendor/gsap.min.js"></script>
+    <script defer src="./assets/js/darkmode.js"></script>
     <!-- Umami analytics -->
-    <script defer data-website-id="15ef081e-97fc-42fd-aaf5-e199c98a7fa6">!function(){"use strict";(t=>{const{screen:{width:e,height:a},navigator:{language:r},location:n,document:i,history:s}=t,{hostname:c,href:o,origin:u}=n,{currentScript:l,referrer:d}=i,h=o.startsWith("data:")?void 0:t.localStorage;if(!l)return;const m="data-",f="true",p=l.getAttribute.bind(l),g=p(m+"website-id"),y=p(m+"host-url"),b=p(m+"tag"),v="false"!==p(m+"auto-track"),w=p(m+"exclude-search")===f,S=p(m+"exclude-hash")===f,N=p(m+"domains")||"",T=N.split(",").map((t=>t.trim())),A=`${(y||"https://umami.t-auer.com"||l.src.split("/").slice(0,-1).join("/")).replace(/\/$/,"")}/api/send`,j=`${e}x${a}`,x=/data-umami-event-([\w-_]+)/,O=m+"umami-event",k=300,E=t=>{try{const{pathname:e,search:a,hash:r}=new URL(t,n.href);return e+(w?"":a)+(S?"":r)}catch(e){return t}},L=()=>({website:g,hostname:c,screen:j,language:r,title:J,url:C,referrer:I,tag:b||void 0}),$=(t,e,a)=>{a&&(I=C,C=E(a.toString()),C!==I&&setTimeout(D,k))},K=()=>M||!g||h&&h.getItem("umami.disabled")||N&&!T.includes(c),U=async(t,e="event")=>{if(K())return;const a={"Content-Type":"application/json"};void 0!==_&&(a["x-umami-cache"]=_);try{const r=await fetch(A,{method:"POST",body:JSON.stringify({type:e,payload:t}),headers:a}),n=await r.json();n&&(M=!!n.disabled,_=n.cache)}catch(t){}},B=()=>{q||(D(),(()=>{const t=(t,e,a)=>{const r=t[e];return(...e)=>(a.apply(null,e),r.apply(t,e))};s.pushState=t(s,"pushState",$),s.replaceState=t(s,"replaceState",$)})(),(()=>{const t=new MutationObserver((([t])=>{J=t&&t.target?t.target.text:void 0})),e=i.querySelector("head > title");e&&t.observe(e,{subtree:!0,characterData:!0,childList:!0})})(),i.addEventListener("click",(async t=>{const e=t=>["BUTTON","A"].includes(t),a=async t=>{const e=t.getAttribute.bind(t),a=e(O);if(a){const r={};return t.getAttributeNames().forEach((t=>{const a=t.match(x);a&&(r[a[1]]=e(t))})),D(a,r)}},r=t.target,i=e(r.tagName)?r:((t,a)=>{let r=t;for(let t=0;t<a;t++){if(e(r.tagName))return r;if(r=r.parentElement,!r)return null}})(r,10);if(!i)return a(r);{const{href:e,target:r}=i,s=i.getAttribute(O);if(s)if("A"===i.tagName){const c="_blank"===r||t.ctrlKey||t.shiftKey||t.metaKey||t.button&&1===t.button;if(s&&e)return c||t.preventDefault(),a(i).then((()=>{c||(n.href=e)}))}else if("BUTTON"===i.tagName)return a(i)}}),!0),q=!0)},D=(t,e)=>U("string"==typeof t?{...L(),name:t,data:"object"==typeof e?e:void 0}:"object"==typeof t?t:"function"==typeof t?t(L()):L()),W=t=>U({...L(),data:t},"identify");t.umami||(t.umami={track:D,identify:W});let _,q,C=E(o),I=d.startsWith(u)?"":d,J=i.title,M=!1;v&&!K()&&("complete"===i.readyState?B():i.addEventListener("readystatechange",B,!0))})(window)}();
-</script> 
+    <script defer src="./assets/js/umami.js" data-website-id="c19e6339-53de-4e1c-acbc-b1aa8c773c00"></script>
   </head>
 
-  
-
-
   <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="assets/js/darkmode.js" defer></script>
-    <link rel="stylesheet" href="assets/css/darkmode.css" />
+    <a class="skip-link" href="#about">Skip to content</a>
     <div class="container">
       <div id="background"></div>
 
       <div class="scroll-area">
-        <nav id="desktop-nav">
+        <nav id="desktop-nav" aria-label="Main">
           <div class="logo">Tobias Auer</div>
           <div>
             <ul class="nav-links">
@@ -34,414 +42,91 @@
               <li><a href="#projects">Projects</a></li>
               <li><a href="#contact">Contact</a></li>
               <li>
+                <!-- The toggle graphic is loaded from assets/images/darkmode-toggle.svg -->
                 <div class="darkmode-container">
                   <div class="dayNight">
-                    <div id="day"></div>
+                    <button
+                      type="button"
+                      id="day"
+                      aria-label="Dark mode"
+                      aria-pressed="false"
+                    ></button>
                   </div>
-                  <svg
-                    version="1.1"
-                    id="darkmode"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    x="0px"
-                    y="0px"
-                    width="70px"
-                    height="35px"
-                    viewBox="0 0 369 171.667"
-                    enable-background="new 0 0 369 171.667"
-                    xml:space="preserve"
-                  >
-                    <g>
-                      <polygon
-                        class="star"
-                        id="star-1"
-                        fill="#A2B5BF"
-                        points="166.253,132.982 164.364,135.676 160.983,136.488 163.196,138.965 162.996,142.16 
-                    166.253,140.998 169.509,142.16 169.309,138.965 171.522,136.488 168.142,135.676 	"
-                      />
-                      <polygon
-                        class="star"
-                        id="star-2"
-                        fill="#A2B5BF"
-                        points="175.522,44.243 172.684,48.29 167.603,49.51 170.929,53.233 170.628,58.035 
-                    175.522,56.288 180.417,58.035 180.116,53.233 183.442,49.51 178.361,48.29 	"
-                      />
-                      <polygon
-                        class="star"
-                        id="star-3"
-                        fill="#A2B5BF"
-                        points="208.22,91.845 206.083,94.891 202.259,95.81 204.763,98.61 204.535,102.226 
-                    208.22,100.911 211.903,102.226 211.677,98.61 214.181,95.81 210.356,94.891 	"
-                      />
-                      <polygon
-                        class="star"
-                        id="star-4"
-                        fill="#A2B5BF"
-                        points="252.545,39.052 250.409,42.098 246.585,43.017 249.089,45.819 248.86,49.433 
-                    252.545,48.118 256.229,49.433 256.002,45.819 258.506,43.017 254.682,42.098 	"
-                      />
-                      <polygon
-                        class="star"
-                        id="star-5"
-                        fill="#A2B5BF"
-                        points="280.151,84.949 282.749,88.997 287.401,90.217 284.355,93.94 284.632,98.742 
-                    280.151,96.995 275.669,98.742 275.946,93.94 272.899,90.217 277.552,88.997 	"
-                      />
-                      <polygon
-                        class="star"
-                        id="star-6"
-                        fill="#A2B5BF"
-                        points="249.791,124.466 246.668,128.919 241.076,130.261 244.737,134.356 244.405,139.64 
-                    249.791,137.718 255.178,139.64 254.845,134.356 258.506,130.261 252.914,128.919 	"
-                      />
-                      <g id="moon">
-                        <g>
-                          <g>
-                            <path
-                              fill="#CAD9DD"
-                              d="M255.662,153.639c-18.114,0-35.144-7.055-47.952-19.863c-12.808-12.807-19.861-29.837-19.861-47.951
-                          s7.054-35.144,19.861-47.951c12.809-12.809,29.838-19.862,47.952-19.862s35.144,7.054,47.951,19.862
-                          c12.809,12.808,19.862,29.838,19.862,47.951s-7.054,35.144-19.862,47.951C290.806,146.584,273.776,153.639,255.662,153.639z"
-                            />
-                            <path
-                              fill="#A2B5BF"
-                              d="M255.662,21.672c35.431,0,62.713,28.731,62.713,64.162c0,35.431-27.282,62.167-62.713,62.167
-                          s-64.153-26.744-64.153-62.175C191.509,50.394,220.231,21.672,255.662,21.672 M255.662,14.35c-9.646,0-19.007,1.891-27.823,5.62
-                          c-8.512,3.6-16.155,8.753-22.717,15.315c-6.563,6.562-11.715,14.204-15.314,22.717c-3.729,8.816-5.62,18.178-5.62,27.823
-                          s1.891,19.007,5.62,27.824c3.6,8.512,8.752,16.154,15.314,22.717c6.562,6.561,14.205,11.713,22.717,15.314
-                          c8.816,3.729,18.178,5.619,27.823,5.619s19.007-1.891,27.823-5.619c8.512-3.602,16.154-8.754,22.717-15.314
-                          c6.562-6.563,11.714-14.205,15.314-22.717c3.729-8.816,5.619-18.178,5.619-27.824s-1.891-19.007-5.619-27.823
-                          c-3.601-8.513-8.753-16.155-15.314-22.717c-6.563-6.562-14.205-11.715-22.717-15.315
-                          C274.669,16.241,265.308,14.35,255.662,14.35L255.662,14.35z"
-                            />
-                          </g>
-                        </g>
-                        <path
-                          fill="#A2B5BF"
-                          d="M295.264,35.35c8.768,10.972,14.013,24.881,14.013,40.017c0,35.43-28.723,64.153-64.153,64.153
-                      c-14.944,0-28.696-5.109-39.602-13.68c11.755,14.711,29.846,24.137,50.141,24.137c35.431,0,64.153-28.721,64.153-64.152
-                      C319.815,65.339,310.213,47.096,295.264,35.35z"
-                        />
-                        <circle
-                          fill="#CAD9DD"
-                          cx="304.291"
-                          cy="98.701"
-                          r="5.392"
-                        />
-                        <path
-                          fill="#CAD9DD"
-                          d="M278.364,126.115c0-8.791-7.127-15.916-15.918-15.916s-15.918,7.125-15.918,15.916
-                      c0,8.793,7.127,15.92,15.918,15.92S278.364,134.908,278.364,126.115z"
-                        />
-                        <circle
-                          fill="#CAD9DD"
-                          cx="242.372"
-                          cy="138.547"
-                          r="3.603"
-                        />
-                        <circle
-                          fill="#CAD9DD"
-                          cx="306.504"
-                          cy="57.724"
-                          r="3.456"
-                        />
-                        <g>
-                          <circle
-                            fill="#A2B5BF"
-                            cx="262.446"
-                            cy="126.115"
-                            r="14.346"
-                          />
-                          <path
-                            opacity="0.12"
-                            fill="#231F20"
-                            d="M249.772,128.002c0-7.922,6.422-14.346,14.346-14.346c3.824,0,7.297,1.5,9.869,3.941
-                        c-2.613-3.535-6.809-5.826-11.541-5.826c-7.923,0-14.346,6.422-14.346,14.344c0,4.1,1.721,7.793,4.477,10.406
-                        C250.815,134.139,249.772,131.193,249.772,128.002z"
-                          />
-                        </g>
-                        <g>
-                          <circle
-                            fill="#A2B5BF"
-                            cx="239.621"
-                            cy="65.064"
-                            r="9.908"
-                          />
-                          <path
-                            opacity="0.12"
-                            fill="#231F20"
-                            d="M230.867,66.366c0-5.472,4.437-9.907,9.908-9.907c2.642,0,5.04,1.036,6.816,2.721
-                        c-1.805-2.44-4.702-4.023-7.972-4.023c-5.472,0-9.907,4.436-9.907,9.908c0,2.829,1.188,5.381,3.091,7.187
-                        C231.587,70.604,230.867,68.57,230.867,66.366z"
-                          />
-                        </g>
-                        <g>
-                          <circle
-                            fill="#A2B5BF"
-                            cx="292.418"
-                            cy="64.686"
-                            r="7.339"
-                          />
-                          <path
-                            opacity="0.12"
-                            fill="#231F20"
-                            d="M285.934,65.651c0-4.054,3.286-7.34,7.339-7.34c1.957,0,3.734,0.768,5.05,2.016
-                        c-1.337-1.808-3.483-2.98-5.904-2.98c-4.054,0-7.339,3.286-7.339,7.34c0,2.096,0.88,3.985,2.289,5.323
-                        C286.468,68.791,285.934,67.283,285.934,65.651z"
-                          />
-                        </g>
-                        <g>
-                          <circle
-                            fill="#A2B5BF"
-                            cx="285.796"
-                            cy="108.111"
-                            r="3.48"
-                          />
-                          <path
-                            opacity="0.12"
-                            fill="#231F20"
-                            d="M282.721,108.568c0-1.922,1.559-3.48,3.481-3.48c0.928,0,1.77,0.365,2.395,0.957
-                        c-0.635-0.857-1.652-1.414-2.801-1.414c-1.922,0-3.48,1.559-3.48,3.48c0,0.994,0.418,1.891,1.086,2.525
-                        C282.974,110.059,282.721,109.344,282.721,108.568z"
-                          />
-                        </g>
-                        <g>
-                          <circle
-                            fill="#A2B5BF"
-                            cx="222.605"
-                            cy="77.949"
-                            r="4.441"
-                          />
-                          <path
-                            opacity="0.12"
-                            fill="#231F20"
-                            d="M218.682,78.533c0-2.452,1.988-4.44,4.44-4.44c1.185,0,2.26,0.464,3.055,1.22
-                        c-0.809-1.094-2.107-1.804-3.572-1.804c-2.452,0-4.44,1.988-4.44,4.44c0,1.269,0.532,2.412,1.386,3.222
-                        C219.005,80.433,218.682,79.521,218.682,78.533z"
-                          />
-                        </g>
-                        <g>
-                          <circle
-                            fill="#A2B5BF"
-                            cx="304.291"
-                            cy="98.701"
-                            r="4.441"
-                          />
-                          <path
-                            opacity="0.12"
-                            fill="#231F20"
-                            d="M300.367,99.284c0-2.452,1.987-4.44,4.44-4.44c1.184,0,2.26,0.465,3.055,1.22
-                        c-0.809-1.094-2.107-1.804-3.572-1.804c-2.452,0-4.44,1.988-4.44,4.441c0,1.268,0.532,2.411,1.386,3.221
-                        C300.69,101.184,300.367,100.272,300.367,99.284z"
-                          />
-                        </g>
-                        <g>
-                          <circle
-                            fill="#A2B5BF"
-                            cx="242.372"
-                            cy="138.547"
-                            r="2.751"
-                          />
-                          <path
-                            opacity="0.12"
-                            fill="#231F20"
-                            d="M239.941,138.908c0-1.52,1.231-2.75,2.751-2.75c0.734,0,1.4,0.287,1.893,0.756
-                        c-0.5-0.68-1.305-1.119-2.213-1.119c-1.52,0-2.752,1.232-2.752,2.752c0,0.785,0.33,1.494,0.859,1.996
-                        C240.142,140.086,239.941,139.521,239.941,138.908z"
-                          />
-                        </g>
-                        <g>
-                          <circle
-                            fill="#A2B5BF"
-                            cx="238.652"
-                            cy="40.059"
-                            r="2.751"
-                          />
-                          <path
-                            opacity="0.12"
-                            fill="#231F20"
-                            d="M236.222,40.421c0-1.52,1.231-2.752,2.751-2.752c0.733,0,1.399,0.288,1.894,0.756
-                        c-0.502-0.678-1.307-1.117-2.214-1.117c-1.52,0-2.751,1.231-2.751,2.751c0,0.786,0.33,1.494,0.858,1.996
-                        C236.421,41.598,236.222,41.033,236.222,40.421z"
-                          />
-                        </g>
-                        <g>
-                          <circle
-                            fill="#A2B5BF"
-                            cx="252.921"
-                            cy="44.149"
-                            r="5.33"
-                          />
-                          <path
-                            opacity="0.12"
-                            fill="#231F20"
-                            d="M248.213,44.85c0-2.943,2.386-5.33,5.329-5.33c1.422,0,2.712,0.558,3.668,1.464
-                        c-0.971-1.313-2.53-2.164-4.289-2.164c-2.943,0-5.329,2.386-5.329,5.329c0,1.522,0.64,2.895,1.663,3.866
-                        C248.601,47.13,248.213,46.036,248.213,44.85z"
-                          />
-                        </g>
-                        <g>
-                          <circle
-                            fill="#A2B5BF"
-                            cx="258.251"
-                            cy="81.17"
-                            r="4.195"
-                          />
-                          <path
-                            opacity="0.12"
-                            fill="#231F20"
-                            d="M254.546,81.722c0-2.317,1.877-4.195,4.193-4.195c1.119,0,2.135,0.438,2.887,1.152
-                        c-0.764-1.033-1.991-1.704-3.375-1.704c-2.316,0-4.194,1.878-4.194,4.195c0,1.198,0.503,2.278,1.309,3.042
-                        C254.851,83.516,254.546,82.655,254.546,81.722z"
-                          />
-                        </g>
-                        <g>
-                          <circle
-                            fill="#A2B5BF"
-                            cx="306.504"
-                            cy="57.724"
-                            r="2.751"
-                          />
-                          <path
-                            opacity="0.12"
-                            fill="#231F20"
-                            d="M304.073,58.085c0-1.519,1.231-2.751,2.751-2.751c0.733,0,1.399,0.288,1.894,0.756
-                        c-0.502-0.678-1.307-1.117-2.215-1.117c-1.519,0-2.75,1.231-2.75,2.751c0,0.786,0.33,1.494,0.857,1.995
-                        C304.272,59.263,304.073,58.698,304.073,58.085z"
-                          />
-                        </g>
-                        <g>
-                          <circle
-                            fill="#A2B5BF"
-                            cx="207.412"
-                            cy="62.199"
-                            r="2.751"
-                          />
-                          <path
-                            opacity="0.12"
-                            fill="#231F20"
-                            d="M204.981,62.56c0-1.52,1.232-2.751,2.752-2.751c0.733,0,1.398,0.287,1.893,0.755
-                        c-0.502-0.678-1.307-1.117-2.213-1.117c-1.52,0-2.752,1.232-2.752,2.752c0,0.785,0.33,1.494,0.858,1.995
-                        C205.182,63.737,204.981,63.171,204.981,62.56z"
-                          />
-                        </g>
-                        <g>
-                          <circle
-                            fill="#A2B5BF"
-                            cx="214.279"
-                            cy="103.596"
-                            r="2.751"
-                          />
-                          <path
-                            opacity="0.12"
-                            fill="#231F20"
-                            d="M211.848,103.958c0-1.52,1.231-2.751,2.751-2.751c0.734,0,1.4,0.287,1.893,0.755
-                        c-0.5-0.678-1.305-1.117-2.213-1.117c-1.52,0-2.751,1.232-2.751,2.752c0,0.785,0.33,1.494,0.858,1.996
-                        C212.048,105.135,211.848,104.568,211.848,103.958z"
-                          />
-                        </g>
-                      </g>
-                    </g>
-                    <g>
-                      <g id="sun">
-                        <g>
-                          <g>
-                            <path
-                              fill="#F4E962"
-                              d="M255.661,153.638c-18.113,0-35.144-7.054-47.951-19.862c-12.809-12.808-19.862-29.838-19.862-47.951
-                          s7.054-35.144,19.862-47.951c12.808-12.809,29.838-19.862,47.951-19.862c18.114,0,35.144,7.054,47.952,19.862
-                          c12.808,12.808,19.861,29.838,19.861,47.951s-7.054,35.144-19.861,47.951C290.805,146.584,273.775,153.638,255.661,153.638z"
-                            />
-                            <path
-                              fill="#F9C941"
-                              d="M255.661,21.671c35.431,0,64.153,28.722,64.153,64.153s-28.723,64.153-64.153,64.153
-                          s-64.153-28.723-64.153-64.153S220.23,21.671,255.661,21.671 M255.661,14.35c-9.646,0-19.007,1.891-27.823,5.62
-                          c-8.512,3.601-16.154,8.753-22.717,15.314c-6.562,6.562-11.714,14.205-15.314,22.717c-3.729,8.816-5.62,18.178-5.62,27.823
-                          s1.891,19.007,5.62,27.823c3.601,8.512,8.753,16.155,15.314,22.717c6.563,6.562,14.205,11.714,22.717,15.314
-                          c8.816,3.729,18.178,5.62,27.823,5.62s19.007-1.891,27.823-5.62c8.512-3.601,16.155-8.753,22.717-15.314
-                          c6.563-6.562,11.715-14.205,15.314-22.717c3.729-8.816,5.62-18.178,5.62-27.823s-1.891-19.007-5.62-27.823
-                          c-3.6-8.512-8.752-16.155-15.314-22.717c-6.562-6.562-14.205-11.714-22.717-15.314C274.668,16.241,265.307,14.35,255.661,14.35
-                          L255.661,14.35z"
-                            />
-                          </g>
-                        </g>
-                      </g>
-                      <path
-                        id="cloud"
-                        fill="#ECF0F1"
-                        stroke="#CAD4D8"
-                        stroke-width="6"
-                        stroke-miterlimit="10"
-                        d="M153.269,109.614h2.813
-                    c-1.348-2.84-2.124-6.003-2.124-9.354c0-12.083,9.794-21.878,21.877-21.878c7.872,0,14.751,4.172,18.605,10.411
-                    c2.121-1.246,4.583-1.974,7.221-1.974c7.889,0,14.285,6.396,14.285,14.285c0,2.1-0.465,4.087-1.277,5.882h6.354
-                    c6.604,0,12.007,5.403,12.007,12.007s-5.403,12.006-12.007,12.006h-25.151H179.48h-26.212c-5.881,0-10.692-4.812-10.692-10.692
-                    S147.388,109.614,153.269,109.614z"
-                      />
-                    </g>
-                  </svg>
                 </div>
               </li>
             </ul>
           </div>
         </nav>
-        <nav id="hamburger-nav">
+        <nav id="hamburger-nav" aria-label="Main">
           <div class="logo">Tobias Auer</div>
           <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
+            <button
+              type="button"
+              class="hamburger-icon"
+              aria-label="Menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
               <span></span>
               <span></span>
               <span></span>
-            </div>
-            <div id="mobile-menu" class="menu-links">
-              <li><a href="#about" onclick="toggleMenu()">About</a></li>
-              <li>
-                <a href="#experience" onclick="toggleMenu()">Experience</a>
-              </li>
-              <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-              <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
+            </button>
+            <ul id="mobile-menu" class="menu-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
           </div>
         </nav>
         <section id="profile">
           <div class="section__pic-container">
             <img
-              src="./assets/images/pic1.png"
-              alt="Tobias Auer Profile Picture"
+              class="lqip"
+              src="data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAABQBQCdASoUABgAPxFws1MsJaSisBgIAYAiCWIAuwAQ9KSCHt9U+5a1PC2H1dlm5ZuaEgAA/lE4eG93b5xl/nb9K8SPbb0NUrdqqJkq6g8Ad7/FGKK4iPFZcuGqMQxy5VqQngiApshoLGrjwopePMgdMZWyTKi46UXWNr8OIiBpYteudS9nhS3Tmq+w4CyZ4NeSq0ZCEAA="
+              data-src="./assets/images/pic1.webp"
+              alt="Portrait of Tobias Auer by the sea"
             />
+            <noscript><img src="./assets/images/pic1.webp" alt="Portrait of Tobias Auer by the sea" /></noscript>
           </div>
           <div class="section__text">
             <p class="section__text__p1">Hello, I'm</p>
             <h1 class="title">Tobias Auer</h1>
             <p class="section__text__p2">Student</p>
             <div class="btn-container">
-              <button
+              <a
                 class="btn btn-color-2"
-                onclick="window.open('./assets/documents/cv.pdf')"
+                href="./assets/documents/cv.pdf"
+                target="_blank"
+                rel="noopener"
               >
                 Download CV
-              </button>
-              <button
-                class="btn btn-color-1"
-                onclick="location.href = '#contact'"
-              >
-                Contact Info
-              </button>
+              </a>
+              <a class="btn btn-color-1" href="#contact">Contact Info</a>
             </div>
             <div id="socials-container">
+              <a
+                href="https://www.linkedin.com/in/tobias-auer-b98010330/"
+                target="_blank"
+                rel="noopener"
+              >
                 <img
-                src="./assets/images/linkedin.png"
-                alt="My Linkedin profile"
-                class="icon"
-                onclick="window.open('https://www.linkedin.com/in/tobias-auer-b98010330/','_blank');"
-              />
-              
-              <img
-                src="./assets/images/github.png"
-                alt="My github profile"
-                class="icon"
-                onclick="window.open('https://www.github.com/Tobias-Auer','_blank');"
-              />
+                  src="./assets/images/linkedin.png"
+                  alt="LinkedIn profile"
+                  class="icon"
+                />
+              </a>
+              <a
+                href="https://www.github.com/Faolan-exe"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="./assets/images/github.png"
+                  alt="GitHub profile"
+                  class="icon"
+                />
+              </a>
             </div>
           </div>
         </section>
@@ -452,54 +137,53 @@
         <div class="section-container">
           <div class="section__pic-container">
             <img
-              src="./assets/images/about-pic.png"
-              alt="Profile Picture"
-              class="about-pic"
+              class="about-pic lqip"
+              src="data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAADwBACdASoUABYAPxF+tVWsJ6SjKAgBgCIJQBdgO4FvwmvoUyUS/q+arK3p1eNpmAAA/ujpgG4Z0kmImOUwud9TPCHAU7w+cDNNa5BjiIX2Th9BJdF3yjXfuRgeL1Tw8I+c4OKZVxavVmFYqD4uMANYzuAZQv5qj4jnWlla6KFu2I2NUltqWc05SuEh8aZDhyz5OjKRSuXBHIe14/z3WHaCwLSpQAAA"
+              data-src="./assets/images/about-pic.webp"
+              alt="Stylized wolf head logo"
             />
+            <noscript><img class="about-pic" src="./assets/images/about-pic.webp" alt="Stylized wolf head logo" /></noscript>
           </div>
           <div class="about-details-container">
             <div class="about-containers">
               <div class="details-container">
                 <img
                   src="./assets/images/experience.png"
-                  alt="Experience Icon"
+                  alt=""
                   class="icon"
                 />
                 <h3>Experience</h3>
                 <p>
-                  2+ years <br />
+                  3+ years <br />
                   Fullstack Development
                 </p>
               </div>
               <div class="details-container">
                 <img
                   src="./assets/images/education.png"
-                  alt="Experience Icon"
+                  alt=""
                   class="icon"
                 />
                 <h3>Education</h3>
                 <p>
-                  Gymnasium, Grade 13 <br>
-                  Expected Graduation: 2026
+                  Gymnasium, Abitur <br>
+                  Graduated: 2026
                 </p>
               </div>
             </div>
             <div class="text-container">
               <p>
-                I am a 13th grader in high school with a passion for technology and software development. Over the past few years I have been heavily involved in web development, 
-                particularly in the area of fullstack development. <br><br> Currently, I am developing a service that connects Minecraft servers to a web interface, providing management tools and comprehensive player and server statistics for individual servers, as well as allowing players to compare their performance across all connected servers.
-                <br><br>I aspire to further develop my skills in the field of software development and to start studying applied computer science after high school.
-                My projects reflect my enthusiasm for creative and technical challenges, and I look forward to learning and growing even more in the future.
+                I recently graduated from high school (Abitur) and have a deep-seated passion for full-stack software development and hardware engineering. <br><br>
+                In the last months, I bridged the gap between software and hardware by designing a <a class="text-link" href="https://wiki.t-auer.com/en/pcb-design/project1" target="_blank" rel="noopener">custom PCB</a> for an ESP32-C3-based water detector, a project that required mastering SMD soldering, hardware debugging, and RF measurement using a VNA. Building on that, I designed a wearable <a class="text-link" href="https://wiki.t-auer.com/en/pcb-design/ef-badge/rev1-1_write_up" target="_blank" rel="noopener">convention badge</a> around a bare ESP32-S3 chip, featuring a 4-color e-paper display, 48 individually addressable LEDs and a full battery system with charger and fuel gauge, all configurable over WiFi. <br><br>
+                Additionally, I am developing a centralized management platform for Minecraft servers that integrates real-time analytics and cross-server player statistics as well as a management website for my school.<br><br>
+                I am currently studying Applied Computer Science and look forward to refining my ability to build complex, creative, and technically robust systems.
               </p>
             </div>
           </div>
         </div>
-        <img
-          src="./assets/images/arrow.png"
-          alt="arrow-icon"
-          class="icon arrow"
-          onclick="location.href='./#experience'"
-        />
+        <a href="#experience" class="arrow" aria-label="Go to Experience">
+          <img src="./assets/images/arrow.png" alt="" class="icon" />
+        </a>
       </section>
       <br />
       <section id="experience" class="scroll-area">
@@ -511,44 +195,28 @@
               <h2 class="experience-sub-title">Frontend Development</h2>
               <div class="article-container">
                 <article>
-                  <img
-                    src="./assets/images/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
+                  <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
                     <h3>HTML</h3>
                     <p>Experienced</p>
                   </div>
                 </article>
                 <article>
-                  <img
-                    src="./assets/images/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
+                  <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
                     <h3>CSS</h3>
                     <p>Intermediate</p>
                   </div>
                 </article>
                 <article>
-                  <img
-                    src="./assets/images/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
+                  <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
                     <h3>JavaScript</h3>
                     <p>Intermediate</p>
                   </div>
                 </article>
                 <article>
-                  <img
-                    src="./assets/images/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
+                  <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
                     <h3>Jinja</h3>
                     <p>Intermediate</p>
@@ -560,44 +228,28 @@
               <h2 class="experience-sub-title">Backend Development</h2>
               <div class="article-container">
                 <article>
-                  <img
-                    src="./assets/images/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
+                  <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
                     <h3>Flask</h3>
                     <p>Experienced</p>
                   </div>
                 </article>
                 <article>
-                  <img
-                    src="./assets/images/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
+                  <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
                     <h3>Django</h3>
                     <p>Basic</p>
                   </div>
                 </article>
                 <article>
-                  <img
-                    src="./assets/images/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
+                  <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
-                    <h3>PostgresSQL</h3>
+                    <h3>PostgreSQL</h3>
                     <p>Basic</p>
                   </div>
                 </article>
                 <article>
-                  <img
-                    src="./assets/images/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
+                  <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
                     <h3>Docker</h3>
                     <p>Basic</p>
@@ -605,76 +257,86 @@
                 </article>
               </div>
             </div>
-            
-            
           </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Other skills</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/images/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/images/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Java</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/images/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C++</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/images/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/images/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Proxmox</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
+          <div class="about-containers">
+            <div class="details-container">
+              <h2 class="experience-sub-title">Hardware</h2>
+              <div class="article-container">
+                <article>
+                  <img src="./assets/images/checkmark.png" alt="" class="icon" />
+                  <div>
+                    <h3>PCB Design</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img src="./assets/images/checkmark.png" alt="" class="icon" />
+                  <div>
+                    <h3>ESP32</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img src="./assets/images/checkmark.png" alt="" class="icon" />
+                  <div>
+                    <h3>SMD Soldering</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img src="./assets/images/checkmark.png" alt="" class="icon" />
+                  <div>
+                    <h3>RF (VNA)</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="details-container">
+              <h2 class="experience-sub-title">Other skills</h2>
+              <div class="article-container">
+                <article>
+                  <img src="./assets/images/checkmark.png" alt="" class="icon" />
+                  <div>
+                    <h3>Python</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img src="./assets/images/checkmark.png" alt="" class="icon" />
+                  <div>
+                    <h3>Java</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img src="./assets/images/checkmark.png" alt="" class="icon" />
+                  <div>
+                    <h3>C++</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                  <img src="./assets/images/checkmark.png" alt="" class="icon" />
+                  <div>
+                    <h3>Git</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                  <img src="./assets/images/checkmark.png" alt="" class="icon" />
+                  <div>
+                    <h3>Proxmox</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
         </div>
-        <img
-          src="./assets/images/arrow.png"
-          alt="arrow-icon"
-          class="icon arrow"
-          onclick="location.href='./#projects'"
-        />
+        <a href="#projects" class="arrow" aria-label="Go to Projects">
+          <img src="./assets/images/arrow.png" alt="" class="icon" />
+        </a>
       </section>
       <br />
       <section id="projects" class="scroll-area">
@@ -685,75 +347,82 @@
             <div class="details-container color-container">
               <div class="article-container">
                 <img
-                  src="./assets/images/project-1.png"
-                  alt="Project 1"
-                  class="project-img"
+                  class="project-img lqip"
+                  src="data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAACwBACdASoUABYAPxGAt1WsJ6UjKAgBgCIJYwC7AA9VJQzjEspibO2arW47eO/gAM4CP8ie6BjKgx30UE4UFNBU9nfanMdXC5b0VAAFSvf1AZHEMgAdn4AFnRHDGZDOZQ0SxvnMVFyERY1wa8XLeMmyATLvBHboG63iumVAAAA="
+                  data-src="./assets/images/project-pcb.webp"
+                  alt="Convention badge PCB with e-paper name display and RGB LEDs"
                 />
+                <noscript><img class="project-img" src="./assets/images/project-pcb.webp" alt="Convention badge PCB with e-paper name display and RGB LEDs" /></noscript>
               </div>
-              <h2 class="experience-sub-title project-title">Oberusel.dev</h2>
+              <h2 class="experience-sub-title project-title">Convention Badge</h2>
               <div class="btn-container">
                 <a
                   class="btn btn-color-2 projects-btn"
-                  href="https://web.archive.org/web/20250108215353/https://www.oberursel.dev/"
+                  href="https://wiki.t-auer.com/en/pcb-design/ef-badge/rev1-1_write_up"
                   target="_blank"
+                  rel="noopener"
                 >
-                  Live Demo
-              </a>
+                  Wiki
+                </a>
               </div>
             </div>
             <div class="details-container color-container">
               <div class="article-container">
                 <img
-                  src="./assets/images/project-2.png"
-                  alt="Project 2"
-                  class="project-img"
+                  class="project-img lqip"
+                  src="data:image/webp;base64,UklGRvQAAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSFgAAAABb6AokqQ2e9lBBr68UEBEBNDQmYeOH6+BUW1bVQ7fBsyJQAQr2MRAVrCHHVgvjHDfzAAR/SeYpNnyGYCRAPHeyTH7cqS+SPEy9/rnHVP3ZM4pGqyUtGkbVlA4IHYAAADwAwCdASoUABQAPxF4sFKsJyQiqA1RgCIJaACdMsp8qAJ66+n16NLcAE1bD8fwnm7jWhMElyqrI7+4rmFFLF780a3b159RDKwGtdieMKySwdgywo11YUhD9O1wr47xutkGbH2jYJcLfXxC8N7ZqsJGDcgJsAAA"
+                  data-src="./assets/images/project-2.webp"
+                  alt="Minecraft grass block"
                 />
+                <noscript><img class="project-img" src="./assets/images/project-2.webp" alt="Minecraft grass block" /></noscript>
               </div>
               <h2 class="experience-sub-title project-title">Minecraft Statistics</h2>
               <div class="btn-container">
                 <a
                   class="btn btn-color-2 projects-btn"
-                  href='https://github.com/Tobias-Auer/MCConnect'
+                  href="https://github.com/Faolan-Exe/MCConnect"
                   target="_blank"
+                  rel="noopener"
                 >
                   Github
-              </a>
+                </a>
                 <a
                   class="btn btn-color-2 projects-btn"
-                  href='https://mc.t-auer.com'
+                  href="https://mc.tobisit.de"
                   target="_blank"
+                  rel="noopener"
                 >
                   Live Demo
-            </a>
+                </a>
               </div>
             </div>
             <div class="details-container color-container">
               <div class="article-container">
                 <img
-                  src="./assets/images/project-3.png"
-                  alt="Project 3"
-                  class="project-img"
+                  class="project-img lqip"
+                  src="data:image/webp;base64,UklGRoYBAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSJsAAAABCri1taeRJA0zVsCTToSVMafTAKWUwzKUwLxbCKNG/5bwWYqICcB2DkbkyerqTK9qSSjERi9fUozMltTdl+KdlsStL+U7MIBPv4gGDLkXCnIM7S+yhtijGWG/ol0Zx3/AHNBg+ICmwfKvlNc84JpRjAtA4lntGQyAKDyrPGvxB1Zm+Sp7XRoBOfeVh6d3FnTFx5kid/jDlgZnUgBWUDggxAAAABAGAJ0BKhQAFAA/EYC3VawoJSMoCAGAIgloDbAFO9K8LyzqAH7ABrRmA12vGvvfu/30FTZhKfWCAAD3CJzSyoqQ9vuOR2gF6RlGQyJqy9pmhpDz92qcQeuKKev06+Ref3NR+TOEOlfz1B2PWCUE3aCOTGmLTpWyKxv685vrGzlyPquodyQ/oTKKuP3+eY9Y/Ut3zVnugEouSLsp/deNVQSYXG+dxZLO6ljVl90UeyRk7HawX2GCZfEA8e/c168CoehW4gA="
+                  data-src="./assets/images/project-3.webp"
+                  alt="GitHub logo"
                 />
+                <noscript><img class="project-img" src="./assets/images/project-3.webp" alt="GitHub logo" /></noscript>
               </div>
               <h2 class="experience-sub-title project-title">See more</h2>
               <div class="btn-container">
                 <a
                   class="btn btn-color-2 projects-btn"
-                  href='https://www.github.com/Tobias-Auer'
+                  href="https://www.github.com/Faolan-exe"
                   target="_blank"
+                  rel="noopener"
                 >
                   Github
-              </a>
+                </a>
               </div>
             </div>
           </div>
         </div>
-        <img
-          src="./assets/images/arrow.png"
-          alt="arrow-icon"
-          class="icon arrow"
-          onclick="location.href='./#contact'"
-        />
+        <a href="#contact" class="arrow" aria-label="Go to Contact">
+          <img src="./assets/images/arrow.png" alt="" class="icon" />
+        </a>
       </section>
       <br />
       <section id="contact" class="scroll-area">
@@ -763,7 +432,7 @@
           <div class="contact-info-container">
             <img
               src="./assets/images/email.png"
-              alt="Email Icon"
+              alt=""
               class="icon contact-icon email-icon"
             />
             <p><a href="mailto:mail@t-auer.com">mail@t-auer.com</a></p>
@@ -771,22 +440,19 @@
           <div class="contact-info-container">
             <img
               src="./assets/images/linkedin.png"
-              alt="linkedin Icon"
+              alt=""
               class="icon contact-icon"
             />
-            <p><a href="https://www.linkedin.com/in/tobias-auer-b98010330/" target="_blank">LinkedIn</a></p>
+            <p><a href="https://www.linkedin.com/in/tobias-auer-b98010330/" target="_blank" rel="noopener">LinkedIn</a></p>
           </div>
         </div>
-        <img
-          src="./assets/images/arrow.png"
-          alt="arrow-icon"
-          class="icon arrow reverse"
-          onclick="location.href='./#profile'"
-        />
+        <a href="#profile" class="arrow" aria-label="Back to top">
+          <img src="./assets/images/arrow.png" alt="" class="icon reverse" />
+        </a>
       </section>
 
       <footer>
-        <nav class="nav-links-container">
+        <nav class="nav-links-container" aria-label="Footer">
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -796,7 +462,11 @@
         </nav>
         <p>
           Copyright &#169; <span id="year"></span> Tobias Auer. All rights
-          reserved
+          reserved.
+        </p>
+        <p class="legal-links">
+          <a href="./impressum.html">Impressum</a> ·
+          <a href="./datenschutz.html">Datenschutz</a>
         </p>
       </footer>
     </div>

@@ -1,0 +1,4 @@
+/* Without JavaScript the full images are shown via <noscript>. */
+img.lqip {
+  display: none !important;
+}
