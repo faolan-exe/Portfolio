@@ -15,6 +15,10 @@
       content="Full-stack web development and custom ESP32 hardware projects."
     />
     <meta property="og:url" content="https://t-auer.com/" />
+    <meta property="og:image" content="https://t-auer.com/assets/images/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/mediaqueries.css" />
@@ -38,7 +42,7 @@
           <div>
             <ul class="nav-links">
               <li><a href="#about">About</a></li>
-              <li><a href="#experience">Experience</a></li>
+              <li><a href="#skills">Skills</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#contact">Contact</a></li>
               <li>
@@ -47,7 +51,7 @@
                   <div class="dayNight">
                     <button
                       type="button"
-                      id="day"
+                      class="theme-toggle"
                       aria-label="Dark mode"
                       aria-pressed="false"
                     ></button>
@@ -57,26 +61,38 @@
             </ul>
           </div>
         </nav>
-        <nav id="hamburger-nav" aria-label="Main">
+        <nav id="hamburger-nav" aria-label="Main (mobile)">
           <div class="logo">Tobias Auer</div>
-          <div class="hamburger-menu">
-            <button
-              type="button"
-              class="hamburger-icon"
-              aria-label="Menu"
-              aria-expanded="false"
-              aria-controls="mobile-menu"
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-            <ul id="mobile-menu" class="menu-links">
-              <li><a href="#about">About</a></li>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
+          <div class="hamburger-actions">
+            <div class="darkmode-container">
+              <div class="dayNight">
+                <button
+                  type="button"
+                  class="theme-toggle"
+                  aria-label="Dark mode"
+                  aria-pressed="false"
+                ></button>
+              </div>
+            </div>
+            <div class="hamburger-menu">
+              <button
+                type="button"
+                class="hamburger-icon"
+                aria-label="Menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <ul id="mobile-menu" class="menu-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
           </div>
         </nav>
         <section id="profile">
@@ -92,7 +108,7 @@
           <div class="section__text">
             <p class="section__text__p1">Hello, I'm</p>
             <h1 class="title">Tobias Auer</h1>
-            <p class="section__text__p2">Student</p>
+            <p class="section__text__p2">Computer Science Student</p>
             <div class="btn-container">
               <a
                 class="btn btn-color-2"
@@ -133,7 +149,7 @@
       </div>
       <section id="about" class="scroll-area">
         <p class="section__text__p1">Get to know more</p>
-        <h1 class="title">About me</h1>
+        <h2 class="title">About me</h2>
         <div class="section-container">
           <div class="section__pic-container">
             <img
@@ -181,77 +197,77 @@
             </div>
           </div>
         </div>
-        <a href="#experience" class="arrow" aria-label="Go to Experience">
+        <a href="#skills" class="arrow" aria-label="Go to Skills">
           <img src="./assets/images/arrow.png" alt="" class="icon" />
         </a>
       </section>
       <br />
-      <section id="experience" class="scroll-area">
+      <section id="skills" class="scroll-area">
         <p class="section__text__p1">Explore my</p>
-        <h1 class="title">Experience</h1>
+        <h2 class="title">Skills</h2>
         <div class="experience-details-container">
           <div class="about-containers">
             <div class="details-container">
-              <h2 class="experience-sub-title">Frontend Development</h2>
+              <h3 class="experience-sub-title">Frontend Development</h3>
               <div class="article-container">
                 <article>
                   <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
-                    <h3>HTML</h3>
+                    <h4>HTML</h4>
                     <p>Experienced</p>
                   </div>
                 </article>
                 <article>
                   <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
-                    <h3>CSS</h3>
+                    <h4>CSS</h4>
                     <p>Intermediate</p>
                   </div>
                 </article>
                 <article>
                   <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
-                    <h3>JavaScript</h3>
+                    <h4>JavaScript</h4>
                     <p>Intermediate</p>
                   </div>
                 </article>
                 <article>
                   <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
-                    <h3>Jinja</h3>
+                    <h4>Jinja</h4>
                     <p>Intermediate</p>
                   </div>
                 </article>
               </div>
             </div>
             <div class="details-container">
-              <h2 class="experience-sub-title">Backend Development</h2>
+              <h3 class="experience-sub-title">Backend Development</h3>
               <div class="article-container">
                 <article>
                   <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
-                    <h3>Flask</h3>
+                    <h4>Flask</h4>
                     <p>Experienced</p>
                   </div>
                 </article>
                 <article>
                   <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
-                    <h3>Django</h3>
+                    <h4>Django</h4>
                     <p>Basic</p>
                   </div>
                 </article>
                 <article>
                   <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
-                    <h3>PostgreSQL</h3>
+                    <h4>PostgreSQL</h4>
                     <p>Basic</p>
                   </div>
                 </article>
                 <article>
                   <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
-                    <h3>Docker</h3>
+                    <h4>Docker</h4>
                     <p>Basic</p>
                   </div>
                 </article>
@@ -260,73 +276,73 @@
           </div>
           <div class="about-containers">
             <div class="details-container">
-              <h2 class="experience-sub-title">Hardware</h2>
+              <h3 class="experience-sub-title">Hardware</h3>
               <div class="article-container">
                 <article>
                   <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
-                    <h3>PCB Design</h3>
+                    <h4>PCB Design</h4>
                     <p>Intermediate</p>
                   </div>
                 </article>
                 <article>
                   <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
-                    <h3>ESP32</h3>
+                    <h4>ESP32</h4>
                     <p>Intermediate</p>
                   </div>
                 </article>
                 <article>
                   <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
-                    <h3>SMD Soldering</h3>
+                    <h4>SMD Soldering</h4>
                     <p>Intermediate</p>
                   </div>
                 </article>
                 <article>
                   <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
-                    <h3>RF (VNA)</h3>
+                    <h4>RF (VNA)</h4>
                     <p>Basic</p>
                   </div>
                 </article>
               </div>
             </div>
             <div class="details-container">
-              <h2 class="experience-sub-title">Other skills</h2>
+              <h3 class="experience-sub-title">Other skills</h3>
               <div class="article-container">
                 <article>
                   <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
-                    <h3>Python</h3>
+                    <h4>Python</h4>
                     <p>Experienced</p>
                   </div>
                 </article>
                 <article>
                   <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
-                    <h3>Java</h3>
+                    <h4>Java</h4>
                     <p>Intermediate</p>
                   </div>
                 </article>
                 <article>
                   <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
-                    <h3>C++</h3>
+                    <h4>C++</h4>
                     <p>Basic</p>
                   </div>
                 </article>
                 <article>
                   <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
-                    <h3>Git</h3>
+                    <h4>Git</h4>
                     <p>Basic</p>
                   </div>
                 </article>
                 <article>
                   <img src="./assets/images/checkmark.png" alt="" class="icon" />
                   <div>
-                    <h3>Proxmox</h3>
+                    <h4>Proxmox</h4>
                     <p>Basic</p>
                   </div>
                 </article>
@@ -341,7 +357,7 @@
       <br />
       <section id="projects" class="scroll-area">
         <p class="section__text__p1">Browse my recent</p>
-        <h1 class="title">Projects</h1>
+        <h2 class="title">Projects</h2>
         <div class="experience-details-container">
           <div class="about-containers">
             <div class="details-container color-container">
@@ -354,11 +370,33 @@
                 />
                 <noscript><img class="project-img" src="./assets/images/project-pcb.webp" alt="Convention badge PCB with e-paper name display and RGB LEDs" /></noscript>
               </div>
-              <h2 class="experience-sub-title project-title">Convention Badge</h2>
+              <h3 class="experience-sub-title project-title">Convention Badge</h3>
               <div class="btn-container">
                 <a
                   class="btn btn-color-2 projects-btn"
                   href="https://wiki.t-auer.com/en/pcb-design/ef-badge/rev1-1_write_up"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Wiki
+                </a>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  class="project-img lqip"
+                  src="data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAQBACdASoXABAAPxFysFAsJqSisAgBgCIJYwDImCHhSTGEjsAwLpxFAAD5CPjcG8wstjtKFrNirC7AdmkghxmwUY6cqBZa1aqtrL/imkDhqYeMranmLi4zQ/9WVOZq2pm9XeJwhM/1vUxE0D2BwfNVQm/sv+X+Tl0yjJJNQSx4Iyh0CO5AAA=="
+                  data-src="./assets/images/project-water-sensor.webp"
+                  alt="3D render of the ESP32-C3 water sensor PCB with battery holder and buzzer"
+                />
+                <noscript><img class="project-img" src="./assets/images/project-water-sensor.webp" alt="3D render of the ESP32-C3 water sensor PCB with battery holder and buzzer" /></noscript>
+              </div>
+              <h3 class="experience-sub-title project-title">Water Sensor</h3>
+              <div class="btn-container">
+                <a
+                  class="btn btn-color-2 projects-btn"
+                  href="https://wiki.t-auer.com/en/pcb-design/project1"
                   target="_blank"
                   rel="noopener"
                 >
@@ -376,7 +414,7 @@
                 />
                 <noscript><img class="project-img" src="./assets/images/project-2.webp" alt="Minecraft grass block" /></noscript>
               </div>
-              <h2 class="experience-sub-title project-title">Minecraft Statistics</h2>
+              <h3 class="experience-sub-title project-title">Minecraft Statistics</h3>
               <div class="btn-container">
                 <a
                   class="btn btn-color-2 projects-btn"
@@ -406,7 +444,7 @@
                 />
                 <noscript><img class="project-img" src="./assets/images/project-3.webp" alt="GitHub logo" /></noscript>
               </div>
-              <h2 class="experience-sub-title project-title">See more</h2>
+              <h3 class="experience-sub-title project-title">See more</h3>
               <div class="btn-container">
                 <a
                   class="btn btn-color-2 projects-btn"
@@ -427,7 +465,7 @@
       <br />
       <section id="contact" class="scroll-area">
         <p class="section__text__p1">Get in touch</p>
-        <h1 class="title">Contact me</h1>
+        <h2 class="title">Contact me</h2>
         <div class="contact-info-upper-container">
           <div class="contact-info-container">
             <img
@@ -435,7 +473,7 @@
               alt=""
               class="icon contact-icon email-icon"
             />
-            <p><a href="mailto:mail@t-auer.com">mail@t-auer.com</a></p>
+            <p data-obf-mail="bW9jLnJldWEtdEBsaWFt"><noscript>mail [at] t-auer [dot] com</noscript></p>
           </div>
           <div class="contact-info-container">
             <img
@@ -455,7 +493,7 @@
         <nav class="nav-links-container" aria-label="Footer">
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -470,6 +508,7 @@
         </p>
       </footer>
     </div>
+    <script src="./assets/js/obfuscate.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

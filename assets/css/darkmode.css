@@ -3,17 +3,15 @@
   align-items: center;
 }
 
-svg {
+.theme-toggle-graphic {
   z-index: 2;
   pointer-events: none;
   margin-left: -74px;
 }
 
-#day,
-#night {
+.theme-toggle {
   width: 70px;
   height: 35px;
-  background: white;
   z-index: 1;
   cursor: pointer;
   border-radius: 100px;
@@ -29,12 +27,15 @@ svg {
   position: relative;
 }
 
-#day,
-#night {
-  top: 0;
-  left: 0;
+.hamburger-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
+.hamburger-actions .dayNight {
+  margin-left: 0;
+}
 
 #background {
   width: 100%;
@@ -62,8 +63,7 @@ a {
   background: #0d1f2b;
 }
 
-.theme-dark #day,
-#night {
+.theme-dark .theme-toggle {
   background: #224f6d;
   border-color: #cad4d8;
 }
@@ -90,7 +90,8 @@ a {
   background-color: rgb(53, 53, 53);
 }
 
-.theme-dark h2 {
+.theme-dark h2,
+.theme-dark .experience-sub-title {
   color: white;
 }
 
@@ -117,6 +118,13 @@ img.icon {
 
 .theme-dark .legal-links a {
   color: rgb(170, 170, 170);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  :root {
+    transition: none !important;
+  }
 }
 
 /* No fade animations while the page is loading */

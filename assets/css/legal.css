@@ -36,3 +36,15 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+/* 404 page */
+
+.not-found {
+  text-align: center;
+  padding-top: 25vh;
+}
+
+.not-found h1 {
+  font-size: 6rem;
+  margin-bottom: 0.5rem;
+}
