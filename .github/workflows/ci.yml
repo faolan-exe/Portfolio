@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  html:
+    name: Validate HTML
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npx --yes html-validate@9 index.html impressum.html datenschutz.html 404.html
+
+  links:
+    name: Check links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          # LinkedIn blocks automated requests (status 999).
+          # t-auer.com is this site itself; new files only exist there after deploy.
+          args: >-
+            --no-progress
+            --root-dir ${{ github.workspace }}
+            --exclude linkedin.com
+            --exclude '^https://t-auer\.com'
+            --exclude-path assets/vendor
+            './*.html'
+          fail: true
